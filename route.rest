@@ -1,0 +1,27 @@
+GET http://localhost:3000/users
+
+###
+
+GET http://localhost:3000/users/65ff1ad87f480bfca93e826f
+
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "email": "hehe@hh.com",
+    "password": "hehe"
+}
+
+###
+
+DELETE http://localhost:3000/users/65ff2287e87f9231898f0224
+
+###
+PATCH http://localhost:3000/users/65ff2257e87f9231898f0223
+Content-Type: application/json
+
+{
+    "email": "updated@hh.com"
+}
