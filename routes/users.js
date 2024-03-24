@@ -1,6 +1,8 @@
 const express = require("express");
 const { ObjectId } = require("mongodb");
-const { connectToDb, getDb } = require("./db");
+const { connectToDb, getDb } = require("../db");
+const User = require("../models/user");
+
 const router = express();
 router.use(express.json());
 
@@ -47,7 +49,7 @@ router.get("/:id", (req, res) => {
 
 // add user
 router.post("/", (req, res) => {
-  const user = req.body;
+  const user = new User(req.body);
   db.collection("users")
     .insertOne(user)
     .then((result) => {
