@@ -2,7 +2,7 @@ GET http://localhost:3000/users
 
 ###
 
-GET http://localhost:3000/users/65ff1ad87f480bfca93e826f
+GET http://localhost:3000/users/65fff20095a46b95075414f8
 
 ###
 
@@ -10,16 +10,26 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-    "email": "janjafil@hh.com",
-    "password": "hehe"
+    "email": "nanuka@gmail.com",
+    "password": "nanuka"
 }
 
 ###
 
-DELETE http://localhost:3000/users/65ff1ad87f480bfca93e826f
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "email": "nanuka@gmail.com",
+    "password": "nanuka"
+}
 
 ###
-PATCH http://localhost:3000/users/65ff2257e87f9231898f0223
+
+DELETE http://localhost:3000/users/65fff20095a46b95075414f8
+
+###
+PATCH http://localhost:3000/users/65fff20095a46b95075414f8
 Content-Type: application/json
 
 {
