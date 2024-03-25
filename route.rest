@@ -35,3 +35,25 @@ Content-Type: application/json
 {
     "email": "updated@hh.com"
 }
+
+###
+
+POST http://localhost:3000/favorites
+Content-Type: application/json
+Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjAwMTc5NTc0ODhlNDE2YjNmNzY4OTUiLCJpYXQiOjE3MTEzNjI5NjYsImV4cCI6MTcxMTM2NjU2Nn0.ON4gbVvYm6JSRm6SiPjNjoR7c9NZeIcxfiY4F3Aigmw"
+
+{
+    "userId": "660017957488e416b3f76895",
+    "productId": 4
+}
+
+###
+
+DELETE http://localhost:3000/favorites/8
+Content-Type: application/json
+Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjAwMTc5NTc0ODhlNDE2YjNmNzY4OTUiLCJpYXQiOjE3MTEzNjI5NjYsImV4cCI6MTcxMTM2NjU2Nn0.ON4gbVvYm6JSRm6SiPjNjoR7c9NZeIcxfiY4F3Aigmw"
+
+{
+    "userId": "660017957488e416b3f76895",
+    "productId": 8
+}
