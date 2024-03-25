@@ -20,8 +20,8 @@ POST http://localhost:3000/users/login
 Content-Type: application/json
 
 {
-    "email": "nanuka@gmail.com",
-    "password": "nanuka"
+    "email": "qwe@qwe.qe",
+    "password": "qwe"
 }
 
 ###
@@ -40,11 +40,17 @@ Content-Type: application/json
 
 POST http://localhost:3000/favorites
 Content-Type: application/json
-Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjAwMTc5NTc0ODhlNDE2YjNmNzY4OTUiLCJpYXQiOjE3MTEzNjI5NjYsImV4cCI6MTcxMTM2NjU2Nn0.ON4gbVvYm6JSRm6SiPjNjoR7c9NZeIcxfiY4F3Aigmw"
+Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjAwMzBlMmM2MzAzMjViZjkyZTc2ZjAiLCJpYXQiOjE3MTEzNzk2NTUsImV4cCI6MTcxMTM4MzI1NX0.SoU6E2XZTL2Zidf9SOsUqGoLfv3PYxH4c8hA-EPxVNw"
 
 {
-    "userId": "660017957488e416b3f76895",
-    "productId": 4
+    "userId": "660030e2c630325bf92e76f0",
+    "productId": 1,
+    "image": "https://images.squarespace-cdn.com/content/v1/5e10bdc20efb8f0d169f85f9/09943d85-b8c7-4d64-af31-1a27d1b76698/arrow.png",
+    "title": "jacket",
+    "price": 29,
+    "rating": {"rate": 2.5, "count": 21},
+    "category": "clothes",
+    "description": "cool jacket"
 }
 
 ###
@@ -56,4 +62,14 @@ Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjAw
 {
     "userId": "660017957488e416b3f76895",
     "productId": 8
+}
+
+###
+
+POST http://localhost:3000/favorites/userfavorites
+Content-Type: application/json
+Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjAwMzBlMmM2MzAzMjViZjkyZTc2ZjAiLCJpYXQiOjE3MTEzNzk2NTUsImV4cCI6MTcxMTM4MzI1NX0.SoU6E2XZTL2Zidf9SOsUqGoLfv3PYxH4c8hA-EPxVNw"
+
+{
+    "userId": "660017957488e416b3f76895"
 }
