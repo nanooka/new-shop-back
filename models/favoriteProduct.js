@@ -7,7 +7,7 @@ const favoriteProductSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-    productId: {
+    id: {
       type: Number,
       required: true,
     },

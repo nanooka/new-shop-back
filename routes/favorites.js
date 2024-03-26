@@ -14,20 +14,12 @@ connectToDb((err) => {
 
 // add product to favorites
 router.post("/", async (req, res) => {
-  const {
-    userId,
-    productId,
-    image,
-    title,
-    price,
-    rating,
-    category,
-    description,
-  } = req.body;
+  const { userId, id, image, title, price, rating, category, description } =
+    req.body;
   try {
     const existingFavorite = await db
       .collection("favorites")
-      .findOne({ userId, productId });
+      .findOne({ userId, id });
 
     if (existingFavorite) {
       return res
