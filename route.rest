@@ -10,8 +10,8 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-    "email": "nanuka@gmail.com",
-    "password": "nanuka"
+    "email": "haha@gmail.com",
+    "password": "haha"
 }
 
 ###
@@ -20,8 +20,8 @@ POST http://localhost:3000/users/login
 Content-Type: application/json
 
 {
-    "email": "qwe@qwe.qe",
-    "password": "qwe"
+    "email": "haha@gmail.com",
+    "password": "haha"
 }
 
 ###
@@ -72,4 +72,40 @@ Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjAw
 
 {
     "userId": "660017957488e416b3f76895"
+}
+
+###
+
+POST http://localhost:3000/cart
+Content-Type: application/json
+Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjAyYWQ5NzYzYWQ3NDk0OTI0ZTM2MzciLCJpYXQiOjE3MTE0NTE1NTIsImV4cCI6MTcxMTQ1NTE1Mn0.G3wmAuZpqU5YaRDzONZxwiweQ0Nq86pREXEUam_df5Y"
+
+{
+    "userId": "6602ad9763ad7494924e3637",
+    "id": 2,
+    "image": "https://images.squarespace-cdn.com/content/v1/5e10bdc20efb8f0d169f85f9/09943d85-b8c7-4d64-af31-1a27d1b76698/arrow.png",
+    "title": "t-shirt",
+    "price": 12,
+    "rating": {"rate": 2.5, "count": 21},
+    "category": "clothes",
+    "description": "cool t-shirt",
+    "quantity": 1
+}
+
+###
+
+DELETE http://localhost:3000/cart/1
+Content-Type: application/json
+Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjAyYWQ5NzYzYWQ3NDk0OTI0ZTM2MzciLCJpYXQiOjE3MTE0NTE1NTIsImV4cCI6MTcxMTQ1NTE1Mn0.G3wmAuZpqU5YaRDzONZxwiweQ0Nq86pREXEUam_df5Y"
+
+{
+    "userId": "6602ad9763ad7494924e3637",
+    "id": 2,
+    "image": "https://images.squarespace-cdn.com/content/v1/5e10bdc20efb8f0d169f85f9/09943d85-b8c7-4d64-af31-1a27d1b76698/arrow.png",
+    "title": "t-shirt",
+    "price": 12,
+    "rating": {"rate": 2.5, "count": 21},
+    "category": "clothes",
+    "description": "cool t-shirt",
+    "quantity": 1
 }

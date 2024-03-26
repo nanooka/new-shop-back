@@ -12,6 +12,7 @@ connectToDb((err) => {
   }
 });
 
+// http://localhost:3000/favorites
 // add product to favorites
 router.post("/", async (req, res) => {
   const { userId, id, image, title, price, rating, category, description } =
