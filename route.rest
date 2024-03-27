@@ -109,3 +109,41 @@ Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjAy
     "description": "cool t-shirt",
     "quantity": 1
 }
+
+###
+
+PATCH http://localhost:3000/cart/1
+Content-Type: application/json
+Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjAyYWQ5NzYzYWQ3NDk0OTI0ZTM2MzciLCJpYXQiOjE3MTE0NTE1NTIsImV4cCI6MTcxMTQ1NTE1Mn0.G3wmAuZpqU5YaRDzONZxwiweQ0Nq86pREXEUam_df5Y"
+
+{
+    "userId": "6602ad9763ad7494924e3637",
+    "id": 2,
+    "image": "https://images.squarespace-cdn.com/content/v1/5e10bdc20efb8f0d169f85f9/09943d85-b8c7-4d64-af31-1a27d1b76698/arrow.png",
+    "title": "t-shirt",
+    "price": 12,
+    "rating": {"rate": 2.5, "count": 21},
+    "category": "clothes",
+    "description": "cool t-shirt",
+    "quantity": 1
+}
+
+###
+
+POST http://localhost:3000/cart/userCart
+Content-Type: application/json
+Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjAwMzBlMmM2MzAzMjViZjkyZTc2ZjAiLCJpYXQiOjE3MTEzNzk2NTUsImV4cCI6MTcxMTM4MzI1NX0.SoU6E2XZTL2Zidf9SOsUqGoLfv3PYxH4c8hA-EPxVNw"
+
+{
+    "userId": "660030e2c630325bf92e76f0"
+}
+
+###
+
+POST http://localhost:3000/cart/userCart/2
+Content-Type: application/json
+Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjAwMzBlMmM2MzAzMjViZjkyZTc2ZjAiLCJpYXQiOjE3MTEzNzk2NTUsImV4cCI6MTcxMTM4MzI1NX0.SoU6E2XZTL2Zidf9SOsUqGoLfv3PYxH4c8hA-EPxVNw"
+
+{
+    "userId": "660030e2c630325bf92e76f0"
+}
