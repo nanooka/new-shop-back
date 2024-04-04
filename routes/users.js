@@ -7,16 +7,6 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/user");
 
 const router = express();
-// router.use(express.json());
-
-// router.use(express.urlencoded({ extended: true }));
-
-// const bodyParser = require("body-parser");
-// router.use(
-//   bodyParser.urlencoded({
-//     extended: true,
-//   })
-// );
 
 let db;
 
@@ -78,7 +68,8 @@ router.post("/", async (req, res) => {
     res.status(201).json(result);
     console.log(result, user);
   } catch (err) {
-    res.status(500).json({ error: "Could not create a new document" });
+    console.log("erorii", err);
+    res.status(500).json({ error: err });
   }
 });
 

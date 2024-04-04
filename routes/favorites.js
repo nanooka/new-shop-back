@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express();
-const { ObjectId } = require("mongodb");
 const { connectToDb, getDb } = require("../db");
 const FavoriteProduct = require("../models/favoriteProduct");
 

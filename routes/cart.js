@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express();
-const { ObjectId } = require("mongodb");
 const { connectToDb, getDb } = require("../db");
 const CartProduct = require("../models/cartProduct");
 
@@ -69,13 +68,6 @@ router.delete("/:id", async (req, res) => {
       return res.status(400).json({ message: "Product not found" });
     }
 
-    // if (existingCartItem.quantity > 1) {
-    //   await db
-    //     .collection("cart")
-    //     .updateOne({ userId, id }, { $inc: { quantity: -1 } });
-    //   return res.status(200).json({ message: "Quantity updated successfully" });
-    // }
-
     const result = await db.collection("cart").deleteOne({ userId, id });
     res.status(200).json(result);
   } catch (err) {
@@ -133,33 +125,5 @@ router.post("/userCart", async (req, res) => {
     res.status(500).json({ error: "Could not get cart" });
   }
 });
-
-// // get user's cart product by id
-// router.post("/userCart/:id", async (req, res) => {
-//   try {
-//     const userId = req.body.userId;
-//     const productId = req.params.id;
-//     console.log(userId, productId);
-
-//     if (!userId) {
-//       return res.status(400).json({ error: "User ID is required" });
-//     }
-//     if (!productId) {
-//       return res.status(400).json({ error: "Product ID is required" });
-//     }
-//     const cartItem = await db
-//       .collection("cart")
-//       .findOne({ userId, id: productId });
-//     console.log(cartItem);
-
-//     if (!cartItem) {
-//       return res.status(404).json({ message: "Product not found in cart" });
-//     }
-//     console.log(productId);
-//     res.status(200).json(cartItem);
-//   } catch (err) {
-//     res.status(500).json({ error: "Could not get cart" });
-//   }
-// });
 
 module.exports = router;
